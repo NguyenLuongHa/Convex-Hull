@@ -1,0 +1,42 @@
+* Graham Scan
+
+- Time Complexity: 
+
+	+ Let n be the number of input points. The algorithm takes O(nLogn) time if we use a O(nLogn) sorting algorithm. 
+
+	+ The first step (finding the bottom-most point) takes O(n) time. 
+
+	+ The second step (sorting points) takes O(nLogn) time. 
+
+	+ The third step takes O(n) time. In the third step, every element is pushed and popped at most one time. 
+
+	+ So the sixth step to process points one by one takes O(n) time, assuming that the stack operations take O(1) time. 
+
+	+ Overall complexity is O(n) + O(nLogn) + O(n) + O(n) which is O(nLogn).
+
+
+- Auxiliary Space: O(n), as explicit stack is used, since no extra space has been taken.
+
+
+* Jarvish March
+
+- Time Complexity:
+ 
+	+ O(m * n), where n is number of input points and m is number of output or hull points (m <= n).  
+
+	+ For every point on the hull we examine all the other points to determine the next point.
+
+	+ Worst case, Time complexity: O(n2).  The worst case occurs when all the points are on the hull (m = n).
+
+
+- Auxiliary Space: O(n), since n extra space has been taken.
+
+
+* Quick Hull
+
+- Time Complexity: 
+	+ The analysis is similar to Quick Sort.
+	+ On average, we get time complexity as O(n Log n), but in worst case, it can become O(n2)
+
+
+
